@@ -33,7 +33,7 @@ def get_month_text(year, month_index):
 
     blank_rows = 6 - len(month)
 
-    text += blank_rows * "\n"
+    text += blank_rows * f"{6*','}\n"
 
     return text
 
