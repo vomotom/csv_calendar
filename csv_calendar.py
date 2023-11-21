@@ -22,8 +22,14 @@ def get_month_text(year, month_index):
     text += ",".join(days_of_week) + "\n" # days of a week
 
     for week in month:
-        row = ",".join(str(day) for day in week)
-        row = row.replace("0", "") # we want blank cells
+        week_row = ""
+        week_without_zeros = []
+        for day in week:
+            if day == 0:
+                week_without_zeros.append("") # we want blank cells
+            else:
+                week_without_zeros.append(str(day))
+        row = ",".join(week_without_zeros)
         text += row + "\n"
 
     text += "\n" # split months
