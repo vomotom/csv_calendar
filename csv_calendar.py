@@ -26,7 +26,7 @@ def get_month_text(year, month_index):
         row = row.replace("0", "") # we want blank cells
         text += row + "\n"
 
-    text += "/n" # split months
+    text += "\n" # split months
 
     return text
 
