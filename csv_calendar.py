@@ -31,7 +31,9 @@ def get_month_text(year, month_index):
         week_row = ",".join(week_without_zeros)
         text += week_row + "\n"
 
-    text += "\n" # split months
+    blank_rows = 6 - len(month)
+
+    text += blank_rows * "\n"
 
     return text
 
